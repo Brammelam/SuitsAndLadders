@@ -1,0 +1,16 @@
+# Unity specific
+Temp/
+Library/
+obj/
+Build/
+.vs/
+
+# Visual Studio Code specific
+.vscode/
+
+# macOS specific
+.DS_Store
+
+# Build generated files
+*.apk
+*.unitypackage

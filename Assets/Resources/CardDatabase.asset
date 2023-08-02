@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ace705dc8d6d343beb345f6d258fa2, type: 3}
+  m_Name: CardDatabase
+  m_EditorClassIdentifier: 
+  cardEntries:
+  - CardID: 0
+    CardName: Report
+    Description: 
+    PrefabResourcePath: Cards/A_report
+  - CardID: 1
+    CardName: Snack
+    Description: 
+    PrefabResourcePath: Cards/E_snack
+  - CardID: 2
+    CardName: Catnip
+    Description: 
+    PrefabResourcePath: Cards/E_catnip
+  - CardID: 3
+    CardName: Delegate
+    Description: 
+    PrefabResourcePath: Cards/B_delegate
+  - CardID: 4
+    CardName: Help
+    Description: 
+    PrefabResourcePath: Cards/B_help
+  - CardID: 5
+    CardName: WorkFromHome
+    Description: 
+    PrefabResourcePath: Cards/A_workhome
+  - CardID: 6
+    CardName: Confuse
+    Description: 
+    PrefabResourcePath: Cards/B_confuse
+  - CardID: 7
+    CardName: LaserPointer
+    Description: 
+    PrefabResourcePath: Cards/B_laserpointer

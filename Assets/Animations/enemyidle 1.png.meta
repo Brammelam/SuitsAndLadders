@@ -1,0 +1,1548 @@
+fileFormatVersion: 2
+guid: e2a1a72c91ec0394e9892cc7eb64a622
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemyidle 1_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1919
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba6ebbe96647164f97bc0ef79adf361
+      internalID: 579600816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1919
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d773fbf9d8b0b334889d950f3edf3562
+      internalID: 83496383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1919
+        width: 95
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00b13963bd5d5a4780ccc5a2b1a2997
+      internalID: -1938997700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_3
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1918
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885e252ead6d3334292f2a9aa7888c48
+      internalID: 2024757570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_4
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1918
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a411796a792d5d7478d208b308bc34d4
+      internalID: 1888807390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_5
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1918
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d9fc3e0f431f8468689f9ecd974e45
+      internalID: 641488250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_6
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 1918
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a0c5b7b0b08304b8af9d9c7888b8f8
+      internalID: 411575669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_7
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1918
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acbdf3eae6a2e7c4596095c22aa645a1
+      internalID: -1618967369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1662
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836ba6c4b0a83084a8089dfdbd6858d6
+      internalID: 187828418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1662
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e311c94ac28a66946b5d588e96bb384e
+      internalID: -629835059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1662
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce5979f05aaf474381ecd9c47f1a52a
+      internalID: 229848185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_11
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1662
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de92c3bfc6ed8a4e8a6d70330a2b061
+      internalID: 1929172922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_12
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1662
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec18311b28e3cc64e8a0e7cf12154ebf
+      internalID: 1552822723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_13
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1662
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c896871edad2094e9213811c370098c
+      internalID: 1509444784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_14
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1662
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef80864460bab8e41a09fd7d3737383e
+      internalID: -680560834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_15
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1662
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8debbe4f06d976418a818b47f7a3250
+      internalID: -1467243165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_16
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1406
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac950beb57ee8f40bdfb3aac75b593b
+      internalID: 141795623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_17
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1406
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b3f056643ca304187f539528ae353f
+      internalID: -2086734196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_18
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1406
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8361eb5e720f4d044a581597ce2663f0
+      internalID: 36101511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_19
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1406
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f26291471d1d774987a0070d3c344d5
+      internalID: 1723646362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_20
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1406
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcd265977401c84996e1b1385f15eb7
+      internalID: 1264169090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_21
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1406
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82983bf521aa016418f47ae0474282e3
+      internalID: -193026749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_22
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1406
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078a671c02850454294fd9a8bf1b2a10
+      internalID: -805885663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_23
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1406
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce101bfc3e8b384ea7d5a81c781a817
+      internalID: -293084292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_24
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1150
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227399f50aeb76949aaf17362d89880a
+      internalID: -715599635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_25
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1150
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd8c9c1dc9eb5c47992bbac226079dc
+      internalID: -201732129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1150
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b12a5b257916a4a858ab9bcb634c08
+      internalID: 1417839849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_27
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1150
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137c5c0e6b048864ebcec9df19dd7a24
+      internalID: 230880812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_28
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1150
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe1802e9474cc847a48d6b586c575af
+      internalID: -1798441328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_29
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1150
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00493eec832b72d40801e309b90820fa
+      internalID: 33373411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_30
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 1150
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630eba89841b1ad409a758363e0ebd5e
+      internalID: 1727339253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_31
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 1150
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be45fa6f22dfa9a4ca00b35a4af16bfc
+      internalID: -1472033243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_32
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 894
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323b8a5b5affdbb4b9b5899e9dac8bdc
+      internalID: -223594188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_33
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 895
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f7fefa5a372c540a80cfd159673a8c
+      internalID: 382019104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_34
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 894
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a91c7b424064141ae2af2bddb447e2
+      internalID: 1932087859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_35
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 894
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1300953219b6f864da2eb80756c1c773
+      internalID: 1363687800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_36
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 894
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa625c7341fd9644491d897ed241952a
+      internalID: 316400446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_37
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 894
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb8a30a004f839428d81c37e412ee24
+      internalID: 1101759000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_38
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 894
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407534c280e611546814fdd609686d40
+      internalID: 1599788434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_39
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 894
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605a568bbc68403469e0108bbc92dfb7
+      internalID: 1195305120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_40
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 638
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce098ee3c27e8c498fdbde50da76c4e
+      internalID: 1398818665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_41
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 638
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027501ce67708e442b8c6c1240862059
+      internalID: 336939384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_42
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 638
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6973db220c725984a87578cd99f64a0b
+      internalID: -533782459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_43
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 638
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120623c6de87a1042b3a48a490af306a
+      internalID: 152917443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_44
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 638
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199825ebb0a33fb44bed88c22af9b872
+      internalID: 1255476160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_45
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 638
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cea8f99cb83c6439a5306691474104
+      internalID: 862553337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_46
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 638
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8d17acddca47c449405a83d87f7bf5
+      internalID: 262105378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_47
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 638
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f960f9b3b35c294990c06819ccff986
+      internalID: -812719997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_48
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 382
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba899fcfc13deae4e865e8defb60af37
+      internalID: -805300486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_49
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 382
+        width: 87
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9b08258de0ba648992f5ea64870923
+      internalID: -281408793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_50
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 382
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eba34097ee5d95428f72f8a84b1af22
+      internalID: -1431685218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_51
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 382
+        width: 88
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8e64199b5a75645b7825d8de6ecdcb
+      internalID: 1773692100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_52
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 382
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6114ad725ec10e040b48fed73cc64a4d
+      internalID: 1123989760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_53
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 382
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06dd06c210a69c4383b8298c4cfd7b4
+      internalID: -165292674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_54
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 382
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cd9282c746c8944915e94e9e9a57c1
+      internalID: 845137186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_55
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 382
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba783f1f0c5b594086ba6ac53d4f05a
+      internalID: -2018850341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 126
+        width: 92
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d835236fb493104fa1d41ecdd3b3e3d
+      internalID: -364581434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_57
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 126
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9ce39c098c53446b21566c79c5cf64
+      internalID: -132470345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_58
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 126
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32556a659272dc40b644e5ff142f06e
+      internalID: 371225305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_59
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 126
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d9060a774f2a24e816ba8cdade1152
+      internalID: -1386084869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_60
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 126
+        width: 93
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3747281ae18e842bb187493c596863
+      internalID: -851507169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_61
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 126
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb417ebceae70cd41afa44fdbdc57d7d
+      internalID: -1952250845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_62
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 126
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aed6c7fa6c86ac489dcdf03e6a2cd17
+      internalID: -36472631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyidle 1_63
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 126
+        width: 95
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925295c99218f51438d75cc6826f048e
+      internalID: -1407642005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      enemyidle 1_0: 579600816
+      enemyidle 1_1: 83496383
+      enemyidle 1_10: 229848185
+      enemyidle 1_11: 1929172922
+      enemyidle 1_12: 1552822723
+      enemyidle 1_13: 1509444784
+      enemyidle 1_14: -680560834
+      enemyidle 1_15: -1467243165
+      enemyidle 1_16: 141795623
+      enemyidle 1_17: -2086734196
+      enemyidle 1_18: 36101511
+      enemyidle 1_19: 1723646362
+      enemyidle 1_2: -1938997700
+      enemyidle 1_20: 1264169090
+      enemyidle 1_21: -193026749
+      enemyidle 1_22: -805885663
+      enemyidle 1_23: -293084292
+      enemyidle 1_24: -715599635
+      enemyidle 1_25: -201732129
+      enemyidle 1_26: 1417839849
+      enemyidle 1_27: 230880812
+      enemyidle 1_28: -1798441328
+      enemyidle 1_29: 33373411
+      enemyidle 1_3: 2024757570
+      enemyidle 1_30: 1727339253
+      enemyidle 1_31: -1472033243
+      enemyidle 1_32: -223594188
+      enemyidle 1_33: 382019104
+      enemyidle 1_34: 1932087859
+      enemyidle 1_35: 1363687800
+      enemyidle 1_36: 316400446
+      enemyidle 1_37: 1101759000
+      enemyidle 1_38: 1599788434
+      enemyidle 1_39: 1195305120
+      enemyidle 1_4: 1888807390
+      enemyidle 1_40: 1398818665
+      enemyidle 1_41: 336939384
+      enemyidle 1_42: -533782459
+      enemyidle 1_43: 152917443
+      enemyidle 1_44: 1255476160
+      enemyidle 1_45: 862553337
+      enemyidle 1_46: 262105378
+      enemyidle 1_47: -812719997
+      enemyidle 1_48: -805300486
+      enemyidle 1_49: -281408793
+      enemyidle 1_5: 641488250
+      enemyidle 1_50: -1431685218
+      enemyidle 1_51: 1773692100
+      enemyidle 1_52: 1123989760
+      enemyidle 1_53: -165292674
+      enemyidle 1_54: 845137186
+      enemyidle 1_55: -2018850341
+      enemyidle 1_56: -364581434
+      enemyidle 1_57: -132470345
+      enemyidle 1_58: 371225305
+      enemyidle 1_59: -1386084869
+      enemyidle 1_6: 411575669
+      enemyidle 1_60: -851507169
+      enemyidle 1_61: -1952250845
+      enemyidle 1_62: -36472631
+      enemyidle 1_63: -1407642005
+      enemyidle 1_7: -1618967369
+      enemyidle 1_8: 187828418
+      enemyidle 1_9: -629835059
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
