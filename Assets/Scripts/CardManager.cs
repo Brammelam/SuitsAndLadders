@@ -7,61 +7,67 @@ using UnityEngine;
 /// The CardManager is responsible for cardlogic<br>
 /// Stuff like drawing cards, shuffling and applying effects from cards</br>
 /// </summary>
-public class CardManager : MonoBehaviour 
+public class CardManager : MonoBehaviour
 {
     public PlayerDeck playerDeck = PlayerDeckHolder.Instance.playerDeck;
 
     public List<Card> hand;
     public List<Card> deck;
     public List<Card> discardPile;
-    private bool[] availableCardSlots;
-    private Transform[] cardSlots;
+    private GameObject cardSlotParent;
+    private List<bool> availableCardSlots = new List<bool>();
+    public List<Transform> cardSlots = new List<Transform>();
     private GameManager gameManager;
     private Dictionary<int, int> playerDeckComposition;
     public GameObject paperPilePrefab;
     public Transform paperPileParent;
+    public bool playerIsDragginCard = false;
 
-    // Fields for managing buffs and debuffs
-    private int workDoneBuffValue;
-    private int workDoneDebuffValue;
-    private int energyGainBuffValue;
-    private int timeCostReductionValue;
-
-
-    public CardManager(Transform[] cardSlots = null)
+    public CardManager(List<Transform> cardSlots = null)
     {
         this.hand = new List<Card>(5);
+
         if (cardSlots != null)
         {
             this.cardSlots = cardSlots;
-            this.availableCardSlots = new bool[cardSlots.Length];
-            for (int i = 0; i < availableCardSlots.Length; i++)
+            this.availableCardSlots = new List<bool>(cardSlots.Count);
+            for (int i = 0; i < cardSlots.Count; i++)
             {
-                availableCardSlots[i] = true;
+                this.availableCardSlots.Add(true);
             }
         }
     }
 
-    public void Initialize(Transform[] cardSlots = null)
+    private void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
         this.hand = new List<Card>(5);
+        
+        gameManager = FindObjectOfType<GameManager>();
+        cardSlotParent = GameObject.FindGameObjectWithTag("CardSlotParent");
+
+        foreach (Transform child in cardSlotParent.transform)
+        {
+            cardSlots.Add(child);
+            child.gameObject.SetActive(false);
+        }
 
         if (cardSlots != null)
         {
-            this.cardSlots = cardSlots;
-            this.availableCardSlots = new bool[cardSlots.Length];
-            for (int i = 0; i < availableCardSlots.Length; i++)
+            this.availableCardSlots = new List<bool>(cardSlots.Count);
+            for (int i = 0; i < cardSlots.Count; i++)
             {
-                availableCardSlots[i] = true;
+                this.availableCardSlots.Add(true);
             }
         }
 
         this.deck = new List<Card>();
         LoadCardsFromPlayerDeck(playerDeck);
 
-
         StartCoroutine(DrawNewHand());
+    }
+
+    private void Update()
+    {
     }
 
     private void LoadCardsFromPlayerDeck(PlayerDeck playerDeck)
@@ -96,7 +102,7 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             // Wait between each call
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.1f);
 
             DrawCard();
         }
@@ -127,13 +133,13 @@ public class CardManager : MonoBehaviour
     {
         // Break out if there are no cards in the deck and no cards in discard to shuffle
         if (deck.Count == 0 && discardPile.Count == 0) return;
-        
-        // Also break out if we have a full hand of 5 cards
-        if (hand.Count >= 5) return;
+
+        // Card limit reached
+        if (hand.Count >= 10) return;
 
         if (deck.Count > 0)
         {
-            Card randCard = deck[Random.Range(0, deck.Count)];            
+            Card randCard = deck[Random.Range(0, deck.Count)];
             AddToHand(randCard);
             deck.Remove(randCard);
         }
@@ -141,19 +147,20 @@ public class CardManager : MonoBehaviour
         {
             Shuffle();
             DrawCard();
-        }        
+        }
     }
 
     public void AddToHand(Card card)
     {
         if (availableCardSlots != null)
         {
-            for (int i = 0; i < availableCardSlots.Length; i++)
+            for (int i = 0; i < availableCardSlots.Count; i++)
             {
                 if (availableCardSlots[i])
                 {
+                    cardSlots[i].gameObject.SetActive(true);
                     card.gameObject.SetActive(true);
-                    
+
                     card.handIndex = i;
                     card.transform.position = cardSlots[i].position;
                     card.position = card.transform.position;
@@ -161,11 +168,12 @@ public class CardManager : MonoBehaviour
 
                     availableCardSlots[i] = false;
                     hand.Add(card);
-                    card.GetComponent<BoxCollider2D>().enabled = true;                    
+                    card.GetComponent<BoxCollider2D>().enabled = true;
                     return;
                 }
             }
-        }        
+        }
+        
     }
 
     public void RemoveFromHand(Card card)
@@ -174,6 +182,8 @@ public class CardManager : MonoBehaviour
         if (availableCardSlots != null)
         {
             availableCardSlots[card.handIndex] = true;
+            cardSlots[card.handIndex].gameObject.SetActive(false);
+
             card.GetComponent<BoxCollider2D>().enabled = false;
         }
     }

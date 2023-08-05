@@ -883,14 +883,18 @@ MonoBehaviour:
   cardText: {fileID: 0}
   workDoneBuff: 0
   workDoneDebuff: 0
-  energyGainBuff: 0
+  energyGainBuff: 1
   timeCostReduction: 0
+  affectAll: 0
+  playOnSelf: 1
   hasBeenPlayed: 0
   handIndex: 0
+  playedByEnemy: 0
   scale: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   mousePositionOffset: {x: 0, y: 0, z: 0}
-  dropZone: {fileID: 0}
+  cameraCanvas: {fileID: 0}
+  overlayCanvas: {fileID: 0}
 --- !u!61 &-6699668867723234712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -898,7 +902,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691195480077604604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

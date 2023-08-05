@@ -887,12 +887,16 @@ MonoBehaviour:
   workDoneDebuff: 0
   energyGainBuff: 0
   timeCostReduction: 0
+  affectAll: 0
+  playOnSelf: 0
   hasBeenPlayed: 0
   handIndex: 0
+  playedByEnemy: 0
   scale: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   mousePositionOffset: {x: 0, y: 0, z: 0}
-  dropZone: {fileID: 0}
+  cameraCanvas: {fileID: 0}
+  overlayCanvas: {fileID: 0}
 --- !u!61 &2096653958523180604
 BoxCollider2D:
   m_ObjectHideFlags: 0

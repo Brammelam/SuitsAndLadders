@@ -13,10 +13,12 @@ public class PlayerScript : Entity
     // Start is used instead of Awake
     private void Start()
     {
-        this.energy = 8;
+        maxEnergy = 8;
+        this.energy = maxEnergy;
         this.workDone = 0;
 
         this.energyText.text = this.energy.ToString();
         this.workDoneText.text = this.workDone.ToString();
+ 
     }
 }

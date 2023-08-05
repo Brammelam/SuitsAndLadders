@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 /// <summary>
@@ -12,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Camera mainCamera;
     public CardManager playerCardManager;
 
-    public Transform[] cardSlots;
+    public List<Transform> cardSlots;
 
     public TextMeshProUGUI deckSizeText;
     public TextMeshProUGUI discardPileText;
@@ -24,32 +23,49 @@ public class GameManager : MonoBehaviour
     public PlayerScript player;
     public EnemyAI enemy;
     public List<Entity> entities = new List<Entity>();
+    private Queue<EnemyAI> enemiesTurnQueue = new Queue<EnemyAI>();
     public Clock clock;
 
     public int playerRoundTime = 0;
     public int enemyRoundTime = 0;
 
     public int maxTime = 12;
-
+    private int turnCounter = 0;
     public bool roundOver = false;
+
+    private bool lunchOptionChosen = false;
+    public GameObject lunchBreakUI, showLunchMenuButton;
+
+    private bool extraTurn = false;
+    private bool extraCards = false;
 
     public enum TurnState
     {
         Starting,
         PlayerTurn,
         EnemyTurn,
+        LunchBreak,
         RoundOver
     }
 
     public TurnState currentTurnState;
 
+    private enum LunchOptions
+    {
+        SardineSushi,
+        CatnipSandwich,
+        TunaSalad
+    }
+
+    private LunchOptions selectedLunchOption;
+
     void Start()
     {
+        currentTurnState = TurnState.Starting;
+        
         entities.Add(player);
         entities.Add(enemy);
 
-        playerCardManager.Initialize(cardSlots);
-        currentTurnState = TurnState.Starting;
     }
 
     public void StartGame()
@@ -60,6 +76,7 @@ public class GameManager : MonoBehaviour
     public void PlayAttackAnimation()
     {
         playerAnimator.SetBool("attack", true);
+        enemyAnimator.SetBool("enemyHurt", true);
         StartCoroutine(ResetAttackAnimation());
     }
 
@@ -67,6 +84,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(.2f);
         playerAnimator.SetBool("attack", false);
+        enemyAnimator.SetBool("enemyHurt", false);
     }
 
     public void PlayEnemyAttackAnimation()
@@ -93,6 +111,18 @@ public class GameManager : MonoBehaviour
         turnAnimator.SetBool("turnChanged", false);
     }
 
+    public void PlayDebuffAnimation(Animator animator)
+    {
+        animator.SetBool("hurt", true);
+        StartCoroutine(ResetHurtAnimation(animator));
+    }
+
+    private IEnumerator ResetHurtAnimation(Animator animator)
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("hurt", false);
+    }
+
     private void Update()
     {
         switch (currentTurnState)
@@ -103,9 +133,9 @@ public class GameManager : MonoBehaviour
                 deckSizeText.text = playerCardManager.deck.Count.ToString();
                 discardPileText.text = playerCardManager.discardPile.Count.ToString();
                 break;
-
             case TurnState.EnemyTurn:
-                // Handle enemy's turn logic here
+                break;
+            case TurnState.LunchBreak:
                 break;
             case TurnState.RoundOver:
                 break;
@@ -120,35 +150,86 @@ public class GameManager : MonoBehaviour
 
     public void EndPlayerTurn()
     {
-        foreach (Card card in playerCardManager.hand)
+        if (extraTurn)
         {
-            card.EndPlayerTurn();
-        }
-
-        if (enemy.timeSpent < maxTime)
-        {
-            turnText.text = "Enemy's turn!";
-            StartCoroutine(PlayChangeTurnAnimationAndStartEnemyTurn());
-            playerRoundTime = 0;
-        }
-    }
-
-    public void EndEnemyTurn()
-    {
-        if (player.timeSpent < maxTime)
-        {
-            turnText.text = "Your turn!";
+            extraTurn = false;
             StartCoroutine(PlayChangeTurnAnimationAndStartPlayerTurn());
-            enemyRoundTime = 0;
         }
         else
         {
-            EndDay(); // Fix if we have multiple enemies
+            StartCoroutine(PlayChangeTurnAnimationAndStartEnemyTurn());
         }
     }
 
+    public IEnumerator EndEnemyTurn()
+    {
+        turnCounter += 1;
+        yield return clock.IncrementClock(1);
+        CheckForLunchBreak();
+        CheckForEndOfDay();
+    }
+
+    private void CheckForLunchBreak()
+    {
+        if (turnCounter == 1)
+        {
+            currentTurnState = TurnState.LunchBreak;            
+            StartCoroutine(HandleLunchBreakEvent());
+        }
+        else
+        {
+            StartCoroutine(PlayChangeTurnAnimationAndStartPlayerTurn());
+        }
+    }
+
+    private void CheckForEndOfDay()
+    {
+        if (turnCounter == 8)
+        {
+            EndDay();
+        }
+    }
+
+    private IEnumerator HandleLunchBreakEvent()
+    {
+        lunchBreakUI.SetActive(true);
+        showLunchMenuButton.SetActive(true);
+        while (!lunchOptionChosen)
+        {
+            yield return null;
+        }
+
+        switch (selectedLunchOption)
+        {
+            case LunchOptions.SardineSushi:
+                player.ResetEnergyToMax();
+                break;
+            case LunchOptions.CatnipSandwich:
+                extraTurn = true;
+                break;
+            case LunchOptions.TunaSalad:
+                extraCards = true;
+                break;
+        }
+
+        lunchOptionChosen = false;
+        lunchBreakUI.SetActive(false);
+        showLunchMenuButton.SetActive(false);
+        foreach (Entity entity in entities)
+        {
+            yield return new WaitForSeconds(1f);
+            entity.ResetEnergyToMax();
+        }
+
+        // Once the lunch break event has been handled, it's time to start the player's turn
+        // You might want to add a delay or some kind of indicator that the lunch break is over before proceeding
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(PlayChangeTurnAnimationAndStartPlayerTurn());
+    }
+
     private IEnumerator PlayChangeTurnAnimationAndStartEnemyTurn()
-    {        
+    {
+        turnText.text = "Enemy's turn!";
         turnAnimator.SetBool("turnChanged", true);
         yield return new WaitForSeconds(turnAnimator.GetCurrentAnimatorStateInfo(0).length);
         turnAnimator.SetBool("turnChanged", false);
@@ -158,28 +239,69 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator PlayChangeTurnAnimationAndStartPlayerTurn()
     {
+        turnText.text = "Your turn!";
         turnAnimator.SetBool("turnChanged", true);
         yield return new WaitForSeconds(turnAnimator.GetCurrentAnimatorStateInfo(0).length);
-        turnAnimator.SetBool("turnChanged", false);
-        StartPlayerTurn();
+        turnAnimator.SetBool("turnChanged", false);        
+
+        StartCoroutine(StartPlayerTurn());
     }
 
-    private void StartPlayerTurn()
+    private IEnumerator StartPlayerTurn()
     {
-        currentTurnState = TurnState.PlayerTurn;
-        playerCardManager.DrawCard();
-        
-        foreach (Card card in playerCardManager.hand)
+        yield return new WaitForSeconds(0.5f);
+        if (turnCounter > 0) playerCardManager.DrawCard();        
+        if (extraCards)
         {
-            card.StartPlayerTurn();
+            yield return new WaitForSeconds(0.5f);
+            playerCardManager.DrawCard();
+            yield return new WaitForSeconds(0.5f);
+            playerCardManager.DrawCard();
+            extraCards = false;
         }
+        currentTurnState = TurnState.PlayerTurn;
     }
 
     private void StartEnemyTurn()
     {
         currentTurnState = TurnState.EnemyTurn;
-        enemy.DrawEnemyCard();
-        StartCoroutine(enemy.PlayTurn());
+
+        foreach (var entity in entities)
+        {
+            if (entity is EnemyAI enemy)
+            {
+                enemy.turnFinished = false;
+                enemiesTurnQueue.Enqueue(enemy);
+            }
+        }
+
+        StartNextEnemyTurn();
+    }
+
+    private void StartNextEnemyTurn()
+    {
+        if (enemiesTurnQueue.Count > 0)
+        {
+            EnemyAI currentEnemy = enemiesTurnQueue.Dequeue();            
+            currentEnemy.DrawEnemyCard();
+            StartCoroutine(EnemyTurnRoutine(currentEnemy));
+        }
+        else
+        {
+            StartCoroutine(EndEnemyTurn());            
+        }
+    }
+
+    private IEnumerator EnemyTurnRoutine(EnemyAI currentEnemy)
+    {
+        
+        while (!currentEnemy.turnFinished)
+        { 
+            yield return StartCoroutine(currentEnemy.PlayTurn());
+        }
+
+        // Once the enemy has finished its turn, start the next enemy's turn
+        StartNextEnemyTurn();
     }
 
     // Call this function to end the day
@@ -189,8 +311,7 @@ public class GameManager : MonoBehaviour
         player.timeSpent = 0;
         enemy.timeSpent = 0;
 
-        StartCoroutine(PlayRoundOverAnimation());
-        
+        StartCoroutine(PlayRoundOverAnimation());        
     }
 
     private IEnumerator PlayRoundOverAnimation()
@@ -209,38 +330,50 @@ public class GameManager : MonoBehaviour
         else if (player.workDone < enemy.workDone) lossScreen.SetActive(true);
         else result = "It's a draw!"; // Do something overtime related here
 
-        
-
         yield return null;
 
     }
 
     // Call this function when a player plays a card
-    public void PlayCard(Card card, bool isPlayer)
+    public void PlayCard(Card card, Entity entity, Entity target)
     {
         int energyCost = card.energy;
         int timeEffect = card.time;
         int workDone = card.work;
 
+        entity.workDone += card.workDoneDebuff;
+        entity.energy -= energyCost;
+        entity.timeSpent += timeEffect;
+        entity.workDone += workDone;
+        entity.roundTime += timeEffect;
+        
+        entity.UpdateHud();
+
         // Apply effects from card
-        if (isPlayer)
+        if (entity is PlayerScript)
         {
-            int timedifference = enemy.timeSpent - player.timeSpent;
+            // Do animation stuff
+            if (card.workDoneBuff != 0 || card.energyGainBuff != 0 || card.timeCostReduction != 0)
+            {
+                //entity.PlayBuffAnimation();
+            }
 
-            // Apply buff to player
-            player.workDone += card.workDoneBuff;
+            if (card.workDoneDebuff != 0)
+            {
+                target.PlayDebuffAnimation();
+            }
 
-            player.UpdateInfo(energyCost, workDone);
-            player.energy -= energyCost;
-            player.timeSpent += timeEffect;
-            player.workDone += workDone;
-            playerRoundTime += timeEffect;
+            if (card.work > 0)
+            {
+                entity.PlayAttackAnimation();
+                target.PlayHurtAnimation();
+            }
 
-            PlayAttackAnimation();
+            //int timedifference = enemy.timeSpent - player.timeSpent;
 
             StartCoroutine(MoveToDiscardPile(card));
-            if (timedifference > 0) clock.IncrementClock(timeEffect - timedifference);
-            else clock.IncrementClock(timeEffect);
+            //if (timedifference > 0) clock.IncrementClock(timeEffect - timedifference);
+            //else clock.IncrementClock(timeEffect);
 
             if (workDone > 0 )
             {
@@ -250,17 +383,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            enemy.workDone += card.workDoneDebuff;
-
-            enemy.UpdateInfo(energyCost, workDone);
-            enemy.energy -= energyCost;
-            enemy.timeSpent += timeEffect;
-            enemy.workDone += workDone;
-            enemyRoundTime += timeEffect;
-            if (enemy.timeSpent > player.timeSpent) clock.IncrementClock(enemy.timeSpent - player.timeSpent);
+            
+            //if (enemy.timeSpent > player.timeSpent) clock.IncrementClock(enemy.timeSpent - player.timeSpent);
         }
         
-        if (player.timeSpent > enemy.timeSpent) clock.UpdateClockColor(1); else if (player.timeSpent < enemy.timeSpent) clock.UpdateClockColor(-1); else clock.UpdateClockColor(0);
+        //if (player.timeSpent > enemy.timeSpent) clock.UpdateClockColor(1); else if (player.timeSpent < enemy.timeSpent) clock.UpdateClockColor(-1); else clock.UpdateClockColor(0);
     }
 
     IEnumerator MoveToDiscardPile(Card card)
@@ -304,5 +431,23 @@ public class GameManager : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    public void OnSardineSushiButtonClicked()
+    {
+        selectedLunchOption = LunchOptions.SardineSushi;
+        lunchOptionChosen = true;
+    }
+
+    public void OnCatnipSandwichButtonClicked()
+    {
+        selectedLunchOption = LunchOptions.CatnipSandwich;
+        lunchOptionChosen = true;
+    }
+
+    public void OnTunaSaladButtonClicked()
+    {
+        selectedLunchOption = LunchOptions.TunaSalad;
+        lunchOptionChosen = true;
     }
 }

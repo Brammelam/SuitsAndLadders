@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 /// <summary>
 /// This EnemyAI inherits from the Entity class<br>
 /// This is the base which all enemies inherit from</br><br>
@@ -19,6 +20,9 @@ public class EnemyAI : Entity
     public TextMeshProUGUI enemyWorkDoneText;
 
     public int enemyEnergy, enemyWorkDone, enemyTimeSpent;
+    public bool turnFinished;
+
+    private int cardLayerOrder = 15;
 
     public enum EnergyState
     {
@@ -37,7 +41,8 @@ public class EnemyAI : Entity
 
     private void Start()
     {
-        this.energy = 5;
+        maxEnergy = 5;
+        this.energy = maxEnergy;
         this.workDone = 0;
 
         this.energyText.text = this.energy.ToString();
@@ -96,7 +101,8 @@ public class EnemyAI : Entity
     }
 
     public IEnumerator PlayTurn()
-    {       
+    {
+        Debug.Log("Enemy has " + this.energy + " energy");        
         // Determine the current energy state
         if (gameManager.enemy.energy <= 3)
         {
@@ -105,74 +111,44 @@ public class EnemyAI : Entity
         else
         {
             currentEnergyState = EnergyState.HighEnergy;
-        }
-
-        // Determine the current time state
-        if ((gameManager.player.timeSpent - gameManager.enemy.timeSpent) <= 2)
-        {
-            currentTimeState = TimeState.LowTime;
-        }
-        else
-        {
-            currentTimeState = TimeState.HighTime;
-        }
-
-        Debug.Log("My energystate is: " + currentEnergyState + " and my timestate is: " + currentTimeState);
+        }        
 
         // Determine the weights for each action
         Dictionary<Card, float> actionWeights = new Dictionary<Card, float>();
-        float minWorkEnergy = float.MaxValue;
 
         foreach (Card card in enemyHand)
         {
             float energyWeight = 1.0f;
-            float timeWeight = 1.0f;
-
-            if (card.work > 0 && card.energy < minWorkEnergy)
-            {
-                minWorkEnergy = card.energy;
-            }
-
 
             switch (currentEnergyState)
             {
                 case EnergyState.LowEnergy:
                     // We're more likely to play "Energy" cards in this state
-                    energyWeight = -card.energy * 1000.0f + 0.01f;
-                    break;
-
-                case EnergyState.HighEnergy:
-                    // We're more likely to play "Productivity" cards in this state
-                    // However, if we don't have enough energy to play any work card,
-                    // we should consider playing an energy card
-                    if (gameManager.enemy.energy < minWorkEnergy && card.energy < 0)
+                    if (card.energy < 0) // cards that increase energy
                     {
-                        energyWeight = -card.energy * 1000.0f + 0.01f;
+                        energyWeight = 1000.0f;
                     }
                     else
                     {
-                        energyWeight = card.work * 2.0f + 0.01f;
+                        energyWeight = 0.01f;
                     }
                     break;
 
-            }
-
-            switch (currentTimeState)
-            {
-                case TimeState.LowTime:
-                    // We're less likely to play cards that take a lot of time in this state
-                    timeWeight = (gameManager.maxTime - card.time) * 2.0f + 0.01f;
-                    break;
-
-                case TimeState.HighTime:
-                    // We're more likely to play cards that take a lot of time in this state
-                    timeWeight = card.time * 2.0f + 0.01f;
+                case EnergyState.HighEnergy:
+                    // We're more likely to play "Attack" cards in this state
+                    if (card.energy > 0) // cards that decrease energy (presumably attack cards)
+                    {
+                        energyWeight = 1000.0f;
+                    }
+                    else
+                    {
+                        energyWeight = 0.01f;
+                    }
                     break;
             }
 
-            // Combine the weights from the energy and time states
-            actionWeights[card] = energyWeight * timeWeight;
-
+            // Assign the weight from the energy state
+            actionWeights[card] = energyWeight;
         }
 
         // Select an action based on these weights
@@ -181,76 +157,47 @@ public class EnemyAI : Entity
         // If a valid card is found, play it and move it to the discard pile
         if (selectedCard!=null)
         {
-            gameManager.PlayCard(selectedCard, false);
+            Debug.Log("I'm going to play " + selectedCard.name + " this turn! Because my states are: " + currentEnergyState + " for energy. And I have " + gameManager.enemy.energy + " energy!");
+            gameManager.PlayCard(selectedCard, this, this);
+            StartCoroutine(MoveToEnemyDiscardPile(cardIndex));
 
             DisplayPlayedCard(selectedCard);
-            StartCoroutine(MoveToEnemyDiscardPile(cardIndex));
             gameManager.PlayEnemyAttackAnimation();
-            Debug.Log("I'm going to play " + selectedCard.name + " this turn! Because my states are: " + currentEnergyState + " for energy and " + currentTimeState + " for time! And I have " + gameManager.enemy.energy + " energy!");
         }
         else
         {
             Debug.Log("All these cards sucked! Ending my turn!");
-            gameManager.EndEnemyTurn();
-            yield break;
+            turnFinished = true;
         }
-
-        yield return new WaitForSeconds(2f);
-
-        if (gameManager.player.timeSpent > gameManager.enemy.timeSpent)
-        {
-            StartCoroutine(PlayTurn());
-        }
-        else
-        {
-            Debug.Log("Time's up, ending my turn!");
-            gameManager.EndEnemyTurn();
-            yield break;
-        }
+        yield return new WaitForSeconds(3f);
     }
 
     public (Card, int) WeightedRandom(Dictionary<Card, float> weights)
     {
+        int cardIndex = 0;
         float totalWeight = 0.0f;
 
-        // Calculate the total weight of all items
-        foreach (float weight in weights.Values)
-        {
-            totalWeight += weight;
-        }
-
-        // Choose a random value between 0 and the total weight
-        float randomValue = Random.value * totalWeight;
-
-        int cardIndex = 0;
-        // Find the item that this random value corresponds to
+        // Calculate the total weight of all playable items and find the item that the random value corresponds to
         foreach (KeyValuePair<Card, float> kvp in weights)
         {
             // Check if card can be played before anything else
-            if ((gameManager.enemy.energy >= kvp.Key.energy && kvp.Key.energy >= 0) || kvp.Key.energy < 0)
+            if ((this.energy >= kvp.Key.energy && kvp.Key.energy >= 0) || kvp.Key.energy < 0)
             {
-                if (randomValue < kvp.Value)
+                // Add this card's weight to the total weight
+                totalWeight += kvp.Value;
+
+                // Choose a random value between 0 and the total weight
+                float randomValue = Random.value * totalWeight;
+
+                if (randomValue <= kvp.Value)
                 {
                     return (kvp.Key, cardIndex);
                 }
-                else
-                {
-                    // Subtract this item's weight from the random value
-                    randomValue -= kvp.Value;
-                }
-            }
-            else
-            {
-                // Skip the current card and adjust the total weight to reflect the skipped card
-                totalWeight -= kvp.Value;
-                randomValue = Random.value * totalWeight;
             }
             cardIndex += 1;
         }
 
-        // If we haven't returned by this point, something has gone wrong,
-        // e.g. because of floating point precision errors.
-        // In this case, we just return null
+        // If we haven't returned by this point, there were no valid cards to play.
         return (null, -1);
     }
 
@@ -266,21 +213,24 @@ public class EnemyAI : Entity
 
         // Create a new parent object at the enemy's position
         GameObject cardParent = new GameObject("CardParent");
-        cardParent.transform.position = this.transform.position;
+        cardParent.transform.position = this.transform.position - new Vector3(10,3);
         cardParent.transform.rotation = Quaternion.LookRotation(cardParent.transform.position - Camera.main.transform.position);
 
         // Instantiate the prefab as a child of the new parent
         GameObject cardInstance = Instantiate(cardPrefabResource, cardParent.transform);
-
+        cardInstance.GetComponent<Card>().playedByEnemy = true;
+        cardInstance.transform.localScale *= 1.5f;
+        cardInstance.GetComponent<SortingGroup>().sortingOrder = cardLayerOrder;
+        cardLayerOrder += 1;
         // Move the card upwards over time, this could be replaced with an animation or any effect you want
-        for (float t = 0; t <= 3; t += Time.deltaTime)
+        for (float t = 0; t <= 5; t += Time.deltaTime)
         {
             cardParent.transform.position += new Vector3(0, 0.01f, 0);
             yield return null;
         }
 
-        Destroy(cardInstance);
-        Destroy(cardParent);
+        Destroy(cardInstance, 3f);
+        Destroy(cardParent, 3f); 
     }
 
     // Moves the played card to the Enemy's discard pile

@@ -12,8 +12,9 @@ public class Entity : MonoBehaviour
     public TextMeshProUGUI energyText;
     public TextMeshProUGUI workDoneText;
     public Transform effectTransform;
-    public int energy, workDone;
-    public int timeSpent;
+    public int energy, workDone, maxEnergy;
+    public int timeSpent, roundTime;
+    private Animator animator;
 
     protected Dictionary<string, int> effects = new Dictionary<string, int>();
     private Dictionary<string, GameObject> effectIcons = new Dictionary<string, GameObject>();
@@ -24,6 +25,9 @@ public class Entity : MonoBehaviour
         FindAndAssignUITexts();
 
         timeSpent = 0;
+        roundTime = 0;
+
+        animator = GetComponent<Animator>();
     }
 
     protected void FindAndAssignUITexts()
@@ -38,13 +42,10 @@ public class Entity : MonoBehaviour
             .FirstOrDefault(textComponent => textComponent.gameObject.name == "effects");
     }
 
-    public void UpdateInfo(int _energy, int _workDone)
+    public void UpdateHud()
     {
-        energy -= _energy;
-        workDone += _workDone;
-
-        energyText.text = energy.ToString();
-        workDoneText.text = workDone.ToString();
+        energyText.text = this.energy.ToString();
+        workDoneText.text = this.workDone.ToString();
     }
 
     public virtual void ApplyEffect(string effectType, int effectValue)
@@ -91,7 +92,7 @@ public class Entity : MonoBehaviour
         switch (effectType)
         {
             case "EnergyBuff":
-                effectIconPrefab = Resources.Load<GameObject>("Items/energyIcon");
+                effectIconPrefab = Resources.Load<GameObject>("Items/energyIcon");                
                 break;
             // Add cases for other buff types and their corresponding icons
             default:
@@ -121,6 +122,7 @@ public class Entity : MonoBehaviour
                 // Buff icon doesn't exist, create a new one
                 GameObject effectIcon = Instantiate(effectIconPrefab);
                 effectIcon.transform.SetParent(effectTransform);
+                effectIcon.transform.localScale = new Vector3(50f, 50f);
 
                 if (buffValue >= 2)
                 {
@@ -154,4 +156,41 @@ public class Entity : MonoBehaviour
             counterText.gameObject.SetActive(buffValue >= 2);
         }
     }
+
+    public void PlayAnimation(string animationName)
+    {
+        animator.SetBool(animationName, true);
+        StartCoroutine(ResetAnimation(animationName));
+    }
+
+    private IEnumerator ResetAnimation(string animationName)
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool(animationName, false);
+    }
+
+    public void PlayAttackAnimation()
+    {
+        PlayAnimation("attack");
+    }
+
+    public void PlayBuffAnimation()
+    {
+        PlayAnimation("buff");
+    }
+
+    public void PlayDebuffAnimation()
+    {
+        PlayAnimation("debuff");
+    }
+
+    public void PlayHurtAnimation()
+    {
+        PlayAnimation("hurt");
+    }
+    public void ResetEnergyToMax()
+    {
+        energy = maxEnergy;
+    }
+
 }

@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 14
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,10 +126,10 @@ TextureImporter:
       name: cat_idle_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 1916
-        width: 106
-        height: 116
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: cat_idle_1
       rect:
         serializedVersion: 2
-        x: 306
-        y: 1916
-        width: 106
-        height: 115
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: cat_idle_2
       rect:
         serializedVersion: 2
-        x: 562
-        y: 1916
-        width: 107
-        height: 115
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: cat_idle_3
       rect:
         serializedVersion: 2
-        x: 818
-        y: 1916
-        width: 107
-        height: 114
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: cat_idle_4
       rect:
         serializedVersion: 2
-        x: 1075
-        y: 1916
-        width: 107
-        height: 114
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: cat_idle_5
       rect:
         serializedVersion: 2
-        x: 1331
-        y: 1916
-        width: 108
-        height: 114
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: cat_idle_6
       rect:
         serializedVersion: 2
-        x: 1588
-        y: 1916
-        width: 108
-        height: 113
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: cat_idle_7
       rect:
         serializedVersion: 2
-        x: 1844
-        y: 1916
-        width: 108
-        height: 113
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: cat_idle_8
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1660
-        width: 108
-        height: 112
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: cat_idle_9
       rect:
         serializedVersion: 2
-        x: 309
-        y: 1660
-        width: 109
-        height: 112
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: cat_idle_10
       rect:
         serializedVersion: 2
-        x: 566
-        y: 1660
-        width: 108
-        height: 112
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: cat_idle_11
       rect:
         serializedVersion: 2
-        x: 822
-        y: 1660
-        width: 109
-        height: 111
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: cat_idle_12
       rect:
         serializedVersion: 2
-        x: 1079
-        y: 1660
-        width: 109
-        height: 111
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: cat_idle_13
       rect:
         serializedVersion: 2
-        x: 1335
-        y: 1660
-        width: 109
-        height: 110
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: cat_idle_14
       rect:
         serializedVersion: 2
-        x: 1592
-        y: 1660
-        width: 109
-        height: 110
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: cat_idle_15
       rect:
         serializedVersion: 2
-        x: 1848
-        y: 1660
-        width: 109
-        height: 110
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: cat_idle_16
       rect:
         serializedVersion: 2
-        x: 56
-        y: 1404
-        width: 109
-        height: 110
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: cat_idle_17
       rect:
         serializedVersion: 2
-        x: 311
-        y: 1404
-        width: 109
-        height: 110
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: cat_idle_18
       rect:
         serializedVersion: 2
-        x: 567
-        y: 1404
-        width: 108
-        height: 111
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: cat_idle_19
       rect:
         serializedVersion: 2
-        x: 822
-        y: 1404
-        width: 109
-        height: 111
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: cat_idle_20
       rect:
         serializedVersion: 2
-        x: 1078
-        y: 1404
-        width: 108
-        height: 111
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: cat_idle_21
       rect:
         serializedVersion: 2
-        x: 1333
-        y: 1404
-        width: 108
-        height: 112
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: cat_idle_22
       rect:
         serializedVersion: 2
-        x: 1589
-        y: 1404
-        width: 107
-        height: 112
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: cat_idle_23
       rect:
         serializedVersion: 2
-        x: 1844
-        y: 1404
-        width: 108
-        height: 112
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: cat_idle_24
       rect:
         serializedVersion: 2
-        x: 52
-        y: 1148
-        width: 107
-        height: 113
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: cat_idle_25
       rect:
         serializedVersion: 2
-        x: 307
-        y: 1148
-        width: 107
-        height: 113
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: cat_idle_26
       rect:
         serializedVersion: 2
-        x: 563
-        y: 1148
-        width: 106
-        height: 113
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: cat_idle_27
       rect:
         serializedVersion: 2
-        x: 818
-        y: 1148
-        width: 106
-        height: 114
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: cat_idle_28
       rect:
         serializedVersion: 2
-        x: 1074
-        y: 1148
-        width: 104
-        height: 114
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: cat_idle_29
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 1148
-        width: 104
-        height: 114
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

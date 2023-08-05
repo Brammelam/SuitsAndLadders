@@ -126,10 +126,10 @@ TextureImporter:
       name: enemyidle_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 1919
-        width: 91
-        height: 109
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: enemyidle_1
       rect:
         serializedVersion: 2
-        x: 313
-        y: 1918
-        width: 94
-        height: 108
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: enemyidle_2
       rect:
         serializedVersion: 2
-        x: 567
-        y: 1918
-        width: 95
-        height: 104
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: enemyidle_3
       rect:
         serializedVersion: 2
-        x: 820
-        y: 1919
-        width: 98
-        height: 100
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: enemyidle_4
       rect:
         serializedVersion: 2
-        x: 1079
-        y: 1919
-        width: 97
-        height: 105
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: enemyidle_5
       rect:
         serializedVersion: 2
-        x: 1338
-        y: 1920
-        width: 96
-        height: 108
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: enemyidle_6
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 1922
-        width: 97
-        height: 111
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: enemyidle_7
       rect:
         serializedVersion: 2
-        x: 1855
-        y: 1925
-        width: 96
-        height: 112
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: enemyidle_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 1668
-        width: 95
-        height: 114
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: enemyidle_9
       rect:
         serializedVersion: 2
-        x: 321
-        y: 1668
-        width: 95
-        height: 114
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: enemyidle_10
       rect:
         serializedVersion: 2
-        x: 579
-        y: 1668
-        width: 94
-        height: 115
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: enemyidle_11
       rect:
         serializedVersion: 2
-        x: 836
-        y: 1668
-        width: 93
-        height: 115
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: enemyidle_12
       rect:
         serializedVersion: 2
-        x: 1092
-        y: 1666
-        width: 94
-        height: 115
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: enemyidle_13
       rect:
         serializedVersion: 2
-        x: 1348
-        y: 1665
-        width: 94
-        height: 114
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: enemyidle_14
       rect:
         serializedVersion: 2
-        x: 1604
-        y: 1663
-        width: 95
-        height: 114
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: enemyidle_15
       rect:
         serializedVersion: 2
-        x: 1860
-        y: 1663
-        width: 95
-        height: 112
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: enemyidle_16
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1406
-        width: 95
-        height: 111
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: enemyidle_17
       rect:
         serializedVersion: 2
-        x: 324
-        y: 1407
-        width: 96
-        height: 108
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: enemyidle_18
       rect:
         serializedVersion: 2
-        x: 579
-        y: 1406
-        width: 97
-        height: 107
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: enemyidle_19
       rect:
         serializedVersion: 2
-        x: 835
-        y: 1407
-        width: 97
-        height: 105
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: enemyidle_20
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 1407
-        width: 98
-        height: 103
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: enemyidle_21
       rect:
         serializedVersion: 2
-        x: 1347
-        y: 1407
-        width: 98
-        height: 101
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: enemyidle_22
       rect:
         serializedVersion: 2
-        x: 1603
-        y: 1407
-        width: 97
-        height: 105
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: enemyidle_23
       rect:
         serializedVersion: 2
-        x: 1859
-        y: 1408
-        width: 96
-        height: 108
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: enemyidle_24
       rect:
         serializedVersion: 2
-        x: 66
-        y: 1153
-        width: 97
-        height: 111
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: enemyidle_25
       rect:
         serializedVersion: 2
-        x: 322
-        y: 1155
-        width: 96
-        height: 112
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: enemyidle_26
       rect:
         serializedVersion: 2
-        x: 578
-        y: 1158
-        width: 95
-        height: 113
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: enemyidle_27
       rect:
         serializedVersion: 2
-        x: 833
-        y: 1158
-        width: 95
-        height: 113
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: enemyidle_28
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 1158
-        width: 95
-        height: 113
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: enemyidle_29
       rect:
         serializedVersion: 2
-        x: 1343
-        y: 1159
-        width: 95
-        height: 111
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: enemyidle_30
       rect:
         serializedVersion: 2
-        x: 1598
-        y: 1159
-        width: 95
-        height: 111
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: enemyidle_31
       rect:
         serializedVersion: 2
-        x: 1854
-        y: 1157
-        width: 93
-        height: 110
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,10 +798,10 @@ TextureImporter:
       name: enemyidle_32
       rect:
         serializedVersion: 2
-        x: 61
-        y: 899
-        width: 93
-        height: 110
+        x: 0
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: enemyidle_33
       rect:
         serializedVersion: 2
-        x: 317
-        y: 897
-        width: 92
-        height: 110
+        x: 256
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: enemyidle_34
       rect:
         serializedVersion: 2
-        x: 572
-        y: 896
-        width: 92
-        height: 110
+        x: 512
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -861,10 +861,10 @@ TextureImporter:
       name: enemyidle_35
       rect:
         serializedVersion: 2
-        x: 828
-        y: 895
-        width: 91
-        height: 109
+        x: 768
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

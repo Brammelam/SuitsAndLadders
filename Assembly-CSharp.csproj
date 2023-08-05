@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\CardScriptDeck.cs" />
     <Compile Include="Assets\Scripts\PlayerDeckEntry.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\BezierArrows.cs" />
     <Compile Include="Assets\Scripts\PlayerDeckHolder.cs" />
     <Compile Include="Assets\CardDisplay.cs" />
     <Compile Include="Assets\Scripts\CardManager.cs" />

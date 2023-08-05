@@ -15,8 +15,12 @@ MonoBehaviour:
   unlockedCardIDs: 02000000
   playerDeckEntries:
   - CardID: 0
-    CardCount: 5
+    CardCount: 2
   - CardID: 1
-    CardCount: 0
+    CardCount: 2
   - CardID: 2
-    CardCount: 0
+    CardCount: 2
+  - CardID: 3
+    CardCount: 2
+  - CardID: 4
+    CardCount: 2

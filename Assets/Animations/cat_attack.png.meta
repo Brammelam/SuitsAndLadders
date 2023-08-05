@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,10 +126,10 @@ TextureImporter:
       name: cat_attack_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 1918
-        width: 98
-        height: 113
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: cat_attack_1
       rect:
         serializedVersion: 2
-        x: 311
-        y: 1918
-        width: 104
-        height: 110
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: cat_attack_2
       rect:
         serializedVersion: 2
-        x: 585
-        y: 1919
-        width: 113
-        height: 111
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: cat_attack_3
       rect:
         serializedVersion: 2
-        x: 840
-        y: 1919
-        width: 115
-        height: 110
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: cat_attack_4
       rect:
         serializedVersion: 2
-        x: 1095
-        y: 1918
-        width: 112
-        height: 110
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: cat_attack_5
       rect:
         serializedVersion: 2
-        x: 1351
-        y: 1917
-        width: 108
-        height: 110
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: cat_attack_6
       rect:
         serializedVersion: 2
-        x: 1604
-        y: 1917
-        width: 109
-        height: 110
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: cat_attack_7
       rect:
         serializedVersion: 2
-        x: 1858
-        y: 1917
-        width: 109
-        height: 111
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: cat_attack_8
       rect:
         serializedVersion: 2
-        x: 60
-        y: 1661
-        width: 108
-        height: 112
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: cat_attack_9
       rect:
         serializedVersion: 2
-        x: 310
-        y: 1661
-        width: 106
-        height: 113
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: cat_attack_10
       rect:
         serializedVersion: 2
-        x: 561
-        y: 1662
-        width: 102
-        height: 113
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: cat_attack_11
       rect:
         serializedVersion: 2
-        x: 1090
-        y: 1661
-        width: 110
-        height: 111
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: cat_attack_12
       rect:
         serializedVersion: 2
-        x: 1348
-        y: 1661
-        width: 97
-        height: 110
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: cat_attack_13
       rect:
         serializedVersion: 2
-        x: 1607
-        y: 1661
-        width: 92
-        height: 107
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: cat_attack_14
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 1661
-        width: 120
-        height: 107
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: cat_attack_15
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1406
-        width: 112
-        height: 108
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: cat_attack_16
       rect:
         serializedVersion: 2
-        x: 327
-        y: 1405
-        width: 111
-        height: 110
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: cat_attack_17
       rect:
         serializedVersion: 2
-        x: 583
-        y: 1405
-        width: 108
-        height: 111
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: cat_attack_18
       rect:
         serializedVersion: 2
-        x: 836
-        y: 1405
-        width: 109
-        height: 112
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: cat_attack_19
       rect:
         serializedVersion: 2
-        x: 1089
-        y: 1406
-        width: 111
-        height: 111
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: cat_attack_20
       rect:
         serializedVersion: 2
-        x: 1340
-        y: 1406
-        width: 113
-        height: 112
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: cat_attack_21
       rect:
         serializedVersion: 2
-        x: 1585
-        y: 1406
-        width: 102
-        height: 113
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: cat_attack_22
       rect:
         serializedVersion: 2
-        x: 60
-        y: 1149
-        width: 108
-        height: 111
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: cat_attack_23
       rect:
         serializedVersion: 2
-        x: 329
-        y: 1149
-        width: 98
-        height: 107
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: cat_attack_24
       rect:
         serializedVersion: 2
-        x: 590
-        y: 1149
-        width: 99
-        height: 113
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: cat_attack_25
       rect:
         serializedVersion: 2
-        x: 850
-        y: 1148
-        width: 92
-        height: 117
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: cat_attack_26
       rect:
         serializedVersion: 2
-        x: 1104
-        y: 1149
-        width: 117
-        height: 118
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: cat_attack_27
       rect:
         serializedVersion: 2
-        x: 1362
-        y: 1148
-        width: 100
-        height: 120
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: cat_attack_28
       rect:
         serializedVersion: 2
-        x: 1618
-        y: 1149
-        width: 101
-        height: 120
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: cat_attack_29
       rect:
         serializedVersion: 2
-        x: 1875
-        y: 1150
-        width: 102
-        height: 119
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: cat_attack_30
       rect:
         serializedVersion: 2
-        x: 84
-        y: 893
-        width: 105
-        height: 117
+        x: 0
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: cat_attack_31
       rect:
         serializedVersion: 2
-        x: 340
-        y: 892
-        width: 108
-        height: 118
+        x: 256
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,10 +798,10 @@ TextureImporter:
       name: cat_attack_32
       rect:
         serializedVersion: 2
-        x: 596
-        y: 892
-        width: 111
-        height: 118
+        x: 512
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: cat_attack_33
       rect:
         serializedVersion: 2
-        x: 852
-        y: 892
-        width: 128
-        height: 115
+        x: 768
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: cat_attack_34
       rect:
         serializedVersion: 2
-        x: 1107
-        y: 892
-        width: 124
-        height: 110
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -861,10 +861,10 @@ TextureImporter:
       name: cat_attack_35
       rect:
         serializedVersion: 2
-        x: 1360
-        y: 889
-        width: 110
-        height: 114
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -882,10 +882,10 @@ TextureImporter:
       name: cat_attack_36
       rect:
         serializedVersion: 2
-        x: 1613
-        y: 887
-        width: 92
-        height: 119
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -903,10 +903,10 @@ TextureImporter:
       name: cat_attack_37
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 891
-        width: 96
-        height: 118
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,10 +924,10 @@ TextureImporter:
       name: cat_attack_38
       rect:
         serializedVersion: 2
-        x: 71
-        y: 635
-        width: 95
-        height: 117
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -945,10 +945,10 @@ TextureImporter:
       name: cat_attack_39
       rect:
         serializedVersion: 2
-        x: 324
-        y: 636
-        width: 95
-        height: 116
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,10 +966,10 @@ TextureImporter:
       name: cat_attack_40
       rect:
         serializedVersion: 2
-        x: 577
-        y: 638
-        width: 97
-        height: 114
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -987,10 +987,10 @@ TextureImporter:
       name: cat_attack_41
       rect:
         serializedVersion: 2
-        x: 830
-        y: 638
-        width: 98
-        height: 113
+        x: 768
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,10 +1008,10 @@ TextureImporter:
       name: cat_attack_42
       rect:
         serializedVersion: 2
-        x: 1083
-        y: 638
-        width: 99
-        height: 113
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1029,10 +1029,10 @@ TextureImporter:
       name: cat_attack_43
       rect:
         serializedVersion: 2
-        x: 1335
-        y: 638
-        width: 101
-        height: 113
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,10 +1050,10 @@ TextureImporter:
       name: cat_attack_44
       rect:
         serializedVersion: 2
-        x: 1588
-        y: 638
-        width: 102
-        height: 113
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: cat_attack_45
       rect:
         serializedVersion: 2
-        x: 1841
-        y: 638
-        width: 102
-        height: 113
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -44,11 +44,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,10 +126,10 @@ TextureImporter:
       name: enemyattack 1_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 1920
-        width: 87
-        height: 110
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: enemyattack 1_1
       rect:
         serializedVersion: 2
-        x: 329
-        y: 1921
-        width: 80
-        height: 109
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: enemyattack 1_2
       rect:
         serializedVersion: 2
-        x: 577
-        y: 1921
-        width: 124
-        height: 109
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: enemyattack 1_3
       rect:
         serializedVersion: 2
-        x: 842
-        y: 1921
-        width: 101
-        height: 109
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: enemyattack 1_4
       rect:
         serializedVersion: 2
-        x: 1101
-        y: 1921
-        width: 78
-        height: 107
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: enemyattack 1_5
       rect:
         serializedVersion: 2
-        x: 1358
-        y: 1921
-        width: 76
-        height: 107
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: enemyattack 1_6
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 1920
-        width: 74
-        height: 107
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: enemyattack 1_7
       rect:
         serializedVersion: 2
-        x: 1872
-        y: 1920
-        width: 73
-        height: 106
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: enemyattack 1_8
       rect:
         serializedVersion: 2
-        x: 81
-        y: 1664
-        width: 71
-        height: 106
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: enemyattack 1_9
       rect:
         serializedVersion: 2
-        x: 338
-        y: 1664
-        width: 70
-        height: 105
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: enemyattack 1_10
       rect:
         serializedVersion: 2
-        x: 596
-        y: 1664
-        width: 67
-        height: 104
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: enemyattack 1_11
       rect:
         serializedVersion: 2
-        x: 853
-        y: 1664
-        width: 66
-        height: 104
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: enemyattack 1_12
       rect:
         serializedVersion: 2
-        x: 1110
-        y: 1664
-        width: 64
-        height: 103
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: enemyattack 1_13
       rect:
         serializedVersion: 2
-        x: 1366
-        y: 1664
-        width: 64
-        height: 103
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: enemyattack 1_14
       rect:
         serializedVersion: 2
-        x: 1622
-        y: 1664
-        width: 64
-        height: 103
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: enemyattack 1_15
       rect:
         serializedVersion: 2
-        x: 79
-        y: 1408
-        width: 60
-        height: 104
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: enemyattack 1_16
       rect:
         serializedVersion: 2
-        x: 322
-        y: 1407
-        width: 125
-        height: 109
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: enemyattack 1_17
       rect:
         serializedVersion: 2
-        x: 575
-        y: 1407
-        width: 115
-        height: 108
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +504,10 @@ TextureImporter:
       name: enemyattack 1_18
       rect:
         serializedVersion: 2
-        x: 833
-        y: 1407
-        width: 101
-        height: 106
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +525,10 @@ TextureImporter:
       name: enemyattack 1_19
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 1407
-        width: 79
-        height: 105
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +546,10 @@ TextureImporter:
       name: enemyattack 1_20
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 1407
-        width: 75
-        height: 105
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,10 +567,10 @@ TextureImporter:
       name: enemyattack 1_21
       rect:
         serializedVersion: 2
-        x: 1616
-        y: 1407
-        width: 75
-        height: 105
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -588,10 +588,10 @@ TextureImporter:
       name: enemyattack 1_22
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 1407
-        width: 72
-        height: 104
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: enemyattack 1_23
       rect:
         serializedVersion: 2
-        x: 91
-        y: 1151
-        width: 70
-        height: 104
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: enemyattack 1_24
       rect:
         serializedVersion: 2
-        x: 352
-        y: 1151
-        width: 67
-        height: 104
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -651,10 +651,10 @@ TextureImporter:
       name: enemyattack 1_25
       rect:
         serializedVersion: 2
-        x: 613
-        y: 1151
-        width: 63
-        height: 104
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,10 +672,10 @@ TextureImporter:
       name: enemyattack 1_26
       rect:
         serializedVersion: 2
-        x: 867
-        y: 1151
-        width: 67
-        height: 103
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: enemyattack 1_27
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 1151
-        width: 71
-        height: 102
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,10 +714,10 @@ TextureImporter:
       name: enemyattack 1_28
       rect:
         serializedVersion: 2
-        x: 1374
-        y: 1151
-        width: 71
-        height: 102
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: enemyattack 1_29
       rect:
         serializedVersion: 2
-        x: 1628
-        y: 1151
-        width: 70
-        height: 101
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: enemyattack 1_30
       rect:
         serializedVersion: 2
-        x: 106
-        y: 895
-        width: 46
-        height: 96
+        x: 0
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: enemyattack 1_31
       rect:
         serializedVersion: 2
-        x: 348
-        y: 894
-        width: 63
-        height: 103
+        x: 256
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -798,10 +798,10 @@ TextureImporter:
       name: enemyattack 1_32
       rect:
         serializedVersion: 2
-        x: 584
-        y: 905
-        width: 90
-        height: 108
+        x: 512
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,10 +819,10 @@ TextureImporter:
       name: enemyattack 1_33
       rect:
         serializedVersion: 2
-        x: 834
-        y: 913
-        width: 131
-        height: 109
+        x: 768
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -840,10 +840,10 @@ TextureImporter:
       name: enemyattack 1_34
       rect:
         serializedVersion: 2
-        x: 1107
-        y: 913
-        width: 90
-        height: 109
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -861,10 +861,10 @@ TextureImporter:
       name: enemyattack 1_35
       rect:
         serializedVersion: 2
-        x: 1389
-        y: 916
-        width: 39
-        height: 105
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -882,10 +882,10 @@ TextureImporter:
       name: enemyattack 1_36
       rect:
         serializedVersion: 2
-        x: 1646
-        y: 917
-        width: 58
-        height: 102
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -903,10 +903,10 @@ TextureImporter:
       name: enemyattack 1_37
       rect:
         serializedVersion: 2
-        x: 1895
-        y: 916
-        width: 68
-        height: 105
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,10 +924,10 @@ TextureImporter:
       name: enemyattack 1_38
       rect:
         serializedVersion: 2
-        x: 103
-        y: 662
-        width: 70
-        height: 102
+        x: 0
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -945,10 +945,10 @@ TextureImporter:
       name: enemyattack 1_39
       rect:
         serializedVersion: 2
-        x: 355
-        y: 665
-        width: 76
-        height: 101
+        x: 256
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -966,10 +966,10 @@ TextureImporter:
       name: enemyattack 1_40
       rect:
         serializedVersion: 2
-        x: 611
-        y: 675
-        width: 90
-        height: 88
+        x: 512
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -987,10 +987,10 @@ TextureImporter:
       name: enemyattack 1_41
       rect:
         serializedVersion: 2
-        x: 871
-        y: 673
-        width: 71
-        height: 89
+        x: 768
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,10 +1008,10 @@ TextureImporter:
       name: enemyattack 1_42
       rect:
         serializedVersion: 2
-        x: 1132
-        y: 666
-        width: 60
-        height: 95
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1029,10 +1029,10 @@ TextureImporter:
       name: enemyattack 1_43
       rect:
         serializedVersion: 2
-        x: 1391
-        y: 660
-        width: 53
-        height: 96
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,10 +1050,10 @@ TextureImporter:
       name: enemyattack 1_44
       rect:
         serializedVersion: 2
-        x: 1635
-        y: 655
-        width: 56
-        height: 95
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: enemyattack 1_45
       rect:
         serializedVersion: 2
-        x: 1874
-        y: 650
-        width: 67
-        height: 95
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1092,10 +1092,10 @@ TextureImporter:
       name: enemyattack 1_46
       rect:
         serializedVersion: 2
-        x: 69
-        y: 390
-        width: 84
-        height: 94
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1113,10 +1113,10 @@ TextureImporter:
       name: enemyattack 1_47
       rect:
         serializedVersion: 2
-        x: 314
-        y: 386
-        width: 96
-        height: 94
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1134,10 +1134,10 @@ TextureImporter:
       name: enemyattack 1_48
       rect:
         serializedVersion: 2
-        x: 577
-        y: 383
-        width: 91
-        height: 90
+        x: 512
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1155,10 +1155,10 @@ TextureImporter:
       name: enemyattack 1_49
       rect:
         serializedVersion: 2
-        x: 832
-        y: 383
-        width: 91
-        height: 94
+        x: 768
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1176,10 +1176,10 @@ TextureImporter:
       name: enemyattack 1_50
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 383
-        width: 88
-        height: 98
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1197,10 +1197,10 @@ TextureImporter:
       name: enemyattack 1_51
       rect:
         serializedVersion: 2
-        x: 1342
-        y: 382
-        width: 89
-        height: 103
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1218,10 +1218,10 @@ TextureImporter:
       name: enemyattack 1_52
       rect:
         serializedVersion: 2
-        x: 1597
-        y: 381
-        width: 91
-        height: 107
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1239,10 +1239,10 @@ TextureImporter:
       name: enemyattack 1_53
       rect:
         serializedVersion: 2
-        x: 1852
-        y: 381
-        width: 92
-        height: 110
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1260,10 +1260,10 @@ TextureImporter:
       name: enemyattack 1_54
       rect:
         serializedVersion: 2
-        x: 60
-        y: 127
-        width: 91
-        height: 109
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -15,23 +15,26 @@ public class Card : MonoBehaviour
     public int time, energy, work;
     public TextMeshPro cardCost, cardText;
     public int workDoneBuff, workDoneDebuff, energyGainBuff, timeCostReduction;
+    public bool affectAll, playOnSelf;
     private PlayerScript playerEntity;
+    private Entity entity;
     private GameManager gm;
+    private CardManager cardManager;
 
     public bool hasBeenPlayed;
 
     public int handIndex;
+    private bool isFocused = false;
+    public bool playedByEnemy = false;
 
     public Vector3 scale, position, mousePositionOffset;
-
-    public BoxCollider2D dropZone;
-
-    private bool isDragging;
 
     private float scaleFactor = 1.5f;
     private int moveUpFactor = 3;
 
-    private bool isPlayerTurn = false;
+    private BezierArrows arrow;
+    public Canvas cameraCanvas;
+    public Canvas overlayCanvas;
 
     public void UpdateCardDescriptionText(int energyCost, int workValue, string text)
     {
@@ -50,16 +53,6 @@ public class Card : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    public void StartPlayerTurn()
-    {
-        isPlayerTurn = true;
-    }
-
-    public void EndPlayerTurn()
-    {
-        isPlayerTurn = false;
-    }
-
     private void Start()
     {
         cardText = GetComponentsInChildren<TextMeshPro>()
@@ -72,52 +65,91 @@ public class Card : MonoBehaviour
         UpdateCardDescriptionText(Mathf.Abs(energy), Mathf.Abs(work), cardText.text);
 
         gm = FindObjectOfType<GameManager>();
+        cardManager = FindObjectOfType<CardManager>();
         playerEntity = FindObjectOfType<PlayerScript>();
+        arrow = FindObjectOfType<BezierArrows>();
+        Canvas[] canvases = FindObjectsOfType<Canvas>();
+        foreach (Canvas canvas in canvases)
+        {
+            if (canvas.renderMode == RenderMode.ScreenSpaceOverlay)
+            {
+                overlayCanvas = canvas;
+            }
+            if (canvas.renderMode == RenderMode.ScreenSpaceCamera)
+            {
+                cameraCanvas = canvas;
+            }
+        }
 
-        dropZone = GameObject.FindGameObjectWithTag("DropZone").GetComponent<BoxCollider2D>();
         transform.localScale = transform.localScale * 0.07f;
         scale = transform.localScale;
-
-        isDragging = false;
     }
-
     private void OnMouseDown()
     {
-        if (isPlayerTurn)
+        if (gm.currentTurnState == GameManager.TurnState.PlayerTurn)
         {
-            mousePositionOffset = gameObject.transform.position - GetMouseWorldPosition();
-        }
-    }
-
-    private void OnMouseDrag()
-    {
-        if (isPlayerTurn)
-        {
-            if(!isDragging) isDragging = true;
-            transform.position = GetMouseWorldPosition() + mousePositionOffset;
+            arrow.SetClickedCard(this);
+            cardManager.playerIsDragginCard = true;
         }
     }
 
     private void OnMouseUp()
-    {
-        if (isPlayerTurn)
+    {        
+        if (gm.currentTurnState == GameManager.TurnState.PlayerTurn && cardManager.playerIsDragginCard)
         {
-            // check if we released in the DropZone
-            if (dropZone.OverlapPoint(GetMouseWorldPosition()))
+            arrow.DisableClickedCard();
+
+            // Check if the mouse is over an enemy object
+            RaycastHit2D enemyHit = Physics2D.Raycast(GetMouseWorldPosition(), Vector2.zero, 0f);
+            if (enemyHit.collider != null && enemyHit.collider.CompareTag("Enemy"))
             {
-                if (!hasBeenPlayed)
+                if (playOnSelf)
                 {
-                    // Calculate the base cost of the card (without effects)
-                    int baseEnergyCost = energy;
-                    int baseTimeEffect = time;
+                    ReturnCardToHand();
+                    return;
+                }
+                else
+                {
+                    entity = enemyHit.collider.GetComponentInParent<Entity>();
+                }
+            }
+            // Check if the mouse is over the player object and break if we are not playing a buff or other PlayOnSelf type card
+            // or if we are not playing an AoE card
+            else if (gameObject.CompareTag("Player"))
+            {
+                if (!playOnSelf) 
+                {
+                    ReturnCardToHand();
+                    return;
+                }
+            }
 
-                    // Get the total effect value from the player's buffs
-                    int energyBuffValue = playerEntity.GetEffectValue("EnergyBuff");
-                    int timeCostReductionValue = playerEntity.GetEffectValue("TimeCostReduction");
+            if (!hasBeenPlayed)
+            {
+                // Calculate the base cost of the card (without effects)
+                int baseEnergyCost = energy;
+                int baseTimeEffect = time;
 
-                    // Calculate the actual cost of the card after applying buffs
-                    int actualEnergyCost = Mathf.Max(baseEnergyCost - energyBuffValue, 0);
-                    int actualTimeCost = Mathf.Max(baseTimeEffect - timeCostReductionValue, 0);
+                // Get the total effect value from the player's buffs
+                int energyBuffValue = playerEntity.GetEffectValue("EnergyBuff");
+                int timeCostReductionValue = playerEntity.GetEffectValue("TimeCostReduction");
+
+                // Calculate the actual cost of the card after applying buffs
+                int actualEnergyCost = Mathf.Max(baseEnergyCost - energyBuffValue, 0);
+                int actualTimeCost = Mathf.Max(baseTimeEffect - timeCostReductionValue, 0);
+
+                // Check if the player has enough energy and time to play the card
+                if ((actualTimeCost + gm.player.timeSpent) <= gm.maxTime && (gm.player.energy - actualEnergyCost) >= 0)
+                {
+                    hasBeenPlayed = true;
+                    
+                    if (playOnSelf)
+                    {
+                        gm.PlayCard(this, playerEntity, playerEntity);
+                    } else
+                    {
+                        gm.PlayCard(this, playerEntity, entity);
+                    }
 
                     // Apply the card's energy gain or reduction buffs to the player
                     if (workDoneBuff != 0)
@@ -136,38 +168,33 @@ public class Card : MonoBehaviour
                     {
                         playerEntity.ApplyEffect("TimeCostReduction", timeCostReduction); // Reduces time cost (buff)
                     }
-
-                    // Check if the player has enough energy and time to play the card
-                    if ((actualTimeCost + gm.player.timeSpent) <= gm.maxTime && (gm.player.energy - actualEnergyCost) >= 0)
-                    {
-                        hasBeenPlayed = true;
-                        gm.PlayCard(this, true);
-                    }
-                    else
-                    {
-                        ReturnCardToHand();
-                    }
+                }
+                // Return card to hand if we cant afford to play it
+                else
+                {
+                    ReturnCardToHand();
                 }
             }
-
+            // Catch edgecase where we play a HasBeenPlayedCard
             else
             {
                 ReturnCardToHand();
             }
-
-            isDragging = false;
         }
+
+        cardManager.playerIsDragginCard = false;
     }
 
     private void ReturnCardToHand()
     {
         transform.localScale = scale;
-        transform.position = position;
+        transform.position = cardManager.cardSlots[handIndex].position;
     }
 
     private void OnMouseOver()
     {
-        if (!isDragging)
+        isFocused = true;
+        if (!cardManager.playerIsDragginCard)
         {
             if (transform.localScale == scale)
             {
@@ -175,21 +202,23 @@ public class Card : MonoBehaviour
                 transform.localScale = scale * scaleFactor;
                 transform.position += Vector3.up * moveUpFactor;
             }
-        }
-        else
-        {
-            transform.localScale = scale * scaleFactor;
-        }
+        }        
     }
 
     private void OnMouseExit()
     {
-        this.GetComponent<SortingGroup>().sortingOrder = 1;
-        if (!isDragging && !hasBeenPlayed)
+        isFocused = false;
+        if (!cardManager.playerIsDragginCard && !hasBeenPlayed)
         {
+            this.GetComponent<SortingGroup>().sortingOrder = 1;
             transform.localScale = scale;
-            transform.position = gm.cardSlots[handIndex].position;
+            transform.position = cardManager.cardSlots[handIndex].position;
         }     
+    }
+
+    private void FixedUpdate()
+    {
+        if (!isFocused && !playedByEnemy) transform.position = cardManager.cardSlots[handIndex].position;
     }
 }
 
